@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-02-03T22:47:23 IST" name="DummyJSON API Suite" finished-at="2026-02-03T22:47:25 IST" duration-ms="1994">
+    <groups>
+    </groups>
+    <test started-at="2026-02-03T22:47:23 IST" name="Products API Tests" finished-at="2026-02-03T22:47:25 IST" duration-ms="1994">
+      <class name="com.DummyJSON.API.Tests.getAllProducts">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.DummyJSON.API.Tests.getAllProducts@5db6b9cd]" started-at="2026-02-03T22:47:23 IST" name="setup" finished-at="2026-02-03T22:47:23 IST" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="getProducts()[pri:0, instance:com.DummyJSON.API.Tests.getAllProducts@5db6b9cd]" started-at="2026-02-03T22:47:23 IST" name="getProducts" finished-at="2026-02-03T22:47:25 IST" duration-ms="1521" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProducts -->
+        <test-method signature="getResponseBody()[pri:1, instance:com.DummyJSON.API.Tests.getAllProducts@5db6b9cd]" started-at="2026-02-03T22:47:25 IST" name="getResponseBody" finished-at="2026-02-03T22:47:25 IST" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResponseBody -->
+        <test-method signature="checkStatusCode()[pri:2, instance:com.DummyJSON.API.Tests.getAllProducts@5db6b9cd]" started-at="2026-02-03T22:47:25 IST" name="checkStatusCode" finished-at="2026-02-03T22:47:25 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkStatusCode -->
+      </class> <!-- com.DummyJSON.API.Tests.getAllProducts -->
+    </test> <!-- Products API Tests -->
+  </suite> <!-- DummyJSON API Suite -->
+</testng-results>

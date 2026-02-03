@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DummyJSON API Suite">
+
+    <listeners>
+        <listener class-name="com.DummyJSON.API.listeners.TestListener"/>
+    </listeners>
+
+    <test name="Products API Tests">
+        <classes>
+            <class name="com.DummyJSON.API.Tests.getAllProducts"/>
+        </classes>
+    </test>
+</suite>
