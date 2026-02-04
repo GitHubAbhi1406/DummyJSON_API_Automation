@@ -7,6 +7,15 @@ public class ApiUtils{
 	
 	public static Response getResponse(String endpoint) {
 		
-		return given().when().get(endpoint);
+		return given().
+				when().
+				get(endpoint);
+	}
+	
+	public static Response getReponseById(String endpoint, int id) {
+		
+		return given().
+				when().pathParam("id", id)
+				.get(endpoint);
 	}
 }
