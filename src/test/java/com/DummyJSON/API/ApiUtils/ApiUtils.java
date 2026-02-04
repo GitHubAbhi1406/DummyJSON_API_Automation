@@ -18,4 +18,12 @@ public class ApiUtils{
 				when().pathParam("id", id)
 				.get(endpoint);
 	}
+	
+	public static Response postLogin(String endpoint, String username, String password) {
+		
+		return given().contentType("application/json").
+				body("{ \"username\": \"" + username + "\", \"password\": \"" + password + "\" }").
+				when().
+				post(endpoint);
+	}
 }
