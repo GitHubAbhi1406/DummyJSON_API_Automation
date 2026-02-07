@@ -8,7 +8,7 @@ import com.DummyJSON.API.baseFile.BaseTest;
 import com.DummyJSON.API.endpoints.Routes;
 import io.restassured.response.Response;
 
-public class getSingleRecipeById extends BaseTest{
+public class getSingleRecipeByIdTest extends BaseTest{
 	
 	Response res;
 	

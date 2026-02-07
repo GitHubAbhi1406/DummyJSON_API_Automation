@@ -8,7 +8,7 @@ import com.DummyJSON.API.baseFile.BaseTest;
 import com.DummyJSON.API.endpoints.Routes;
 import io.restassured.response.Response;
 
-public class getUserDetails extends BaseTest{
+public class getUserDetailsTest extends BaseTest{
 	
 	Response res;
 	String email;

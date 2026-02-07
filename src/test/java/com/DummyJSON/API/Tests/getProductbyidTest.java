@@ -11,7 +11,7 @@ import com.DummyJSON.API.endpoints.Routes;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class getProductbyid extends BaseTest{
+public class getProductbyidTest extends BaseTest{
 	
 	Response res;
 	JsonPath json;
