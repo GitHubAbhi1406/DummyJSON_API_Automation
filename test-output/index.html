@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ABHIJIT\AppData\Local\Temp\testng-eclipse-213772134\testng-customsuite.xml</span>
+                    <span>C:\Users\ABHIJIT\AppData\Local\Temp\testng-eclipse--874876302\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +103,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.DummyJSON.API.Tests.getUserDetails" class="method navigator-link" hash-for-method="checkLoginResponse">checkLoginResponse</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.DummyJSON.API.Tests.getSingleRecipeById" class="method navigator-link" hash-for-method="checkData">checkData</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.DummyJSON.API.Tests.getUserDetails" class="method navigator-link" hash-for-method="printResponse">printResponse</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.DummyJSON.API.Tests.getSingleRecipeById" class="method navigator-link" hash-for-method="checkStatusCode">checkStatusCode</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.DummyJSON.API.Tests.getUserDetails" class="method navigator-link" hash-for-method="storeCredentials">storeCredentials</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.DummyJSON.API.Tests.getUserDetails" class="method navigator-link" hash-for-method="validateResponseCode">validateResponseCode</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.DummyJSON.API.Tests.getSingleRecipeById" class="method navigator-link" hash-for-method="printResponse">printResponse</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -136,14 +131,21 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.DummyJSON.API.Tests.getUserDetails</span>
+              <span class="class-name">com.DummyJSON.API.Tests.getSingleRecipeById</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="checkLoginResponse">
-                  </a> <!-- checkLoginResponse -->
-                  <span class="method-name">checkLoginResponse</span>
+                  <a name="checkData">
+                  </a> <!-- checkData -->
+                  <span class="method-name">checkData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkStatusCode">
+                  </a> <!-- checkStatusCode -->
+                  <span class="method-name">checkStatusCode</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -153,26 +155,12 @@
                   <span class="method-name">printResponse</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="storeCredentials">
-                  </a> <!-- storeCredentials -->
-                  <span class="method-name">storeCredentials</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validateResponseCode">
-                  </a> <!-- validateResponseCode -->
-                  <span class="method-name">validateResponseCode</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ABHIJIT\AppData\Local\Temp\testng-eclipse-213772134\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ABHIJIT\AppData\Local\Temp\testng-eclipse--874876302\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -181,7 +169,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.DummyJSON.API.Tests.getUserDetails&quot;/&gt;
+      &lt;class name=&quot;com.DummyJSON.API.Tests.getSingleRecipeById&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -221,28 +209,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkLoginResponse')
-data.setCell(0, 2, 'com.DummyJSON.API.Tests.getUserDetails')
-data.setCell(0, 3, 510);
+data.setCell(0, 1, 'checkData')
+data.setCell(0, 2, 'com.DummyJSON.API.Tests.getSingleRecipeById')
+data.setCell(0, 3, 415);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'storeCredentials')
-data.setCell(1, 2, 'com.DummyJSON.API.Tests.getUserDetails')
-data.setCell(1, 3, 461);
+data.setCell(1, 1, 'printResponse')
+data.setCell(1, 2, 'com.DummyJSON.API.Tests.getSingleRecipeById')
+data.setCell(1, 3, 53);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'printResponse')
-data.setCell(2, 2, 'com.DummyJSON.API.Tests.getUserDetails')
-data.setCell(2, 3, 53);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'validateResponseCode')
-data.setCell(3, 2, 'com.DummyJSON.API.Tests.getUserDetails')
-data.setCell(3, 3, 4);
+data.setCell(2, 1, 'checkStatusCode')
+data.setCell(2, 2, 'com.DummyJSON.API.Tests.getSingleRecipeById')
+data.setCell(2, 3, 4);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 472 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -268,30 +252,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.DummyJSON.API.Tests.getUserDetails</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.DummyJSON.API.Tests.getSingleRecipeById</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">getResponse</span>
-                <span class="method-start">296 ms</span>
+                <span class="method-start">293 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">printResponse</span>
-                <span class="method-start">1711 ms</span>
+                <span class="method-start">1735 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">validateResponseCode</span>
-                <span class="method-start">1769 ms</span>
+                <span class="method-name">checkStatusCode</span>
+                <span class="method-start">1792 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">storeCredentials</span>
-                <span class="method-start">1776 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">checkLoginResponse</span>
-                <span class="method-start">2239 ms</span>
+                <span class="method-name">checkData</span>
+                <span class="method-start">1798 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

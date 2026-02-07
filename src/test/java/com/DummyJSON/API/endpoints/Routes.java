@@ -8,4 +8,5 @@ public class Routes{
 	public static final String CARTS_BY_ID = "/carts/{id}";
 	public static final String USER_BY_ID = "/users/{id}";
 	public static final String LOGIN_INFO = "/user/login";
+	public static final String RECEPI_BY_ID = "/recipes/{id}";
 }
