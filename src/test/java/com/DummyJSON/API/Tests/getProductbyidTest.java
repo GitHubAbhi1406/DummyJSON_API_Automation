@@ -37,6 +37,7 @@ public class getProductbyidTest extends BaseTest{
 		Assert.assertEquals(json.getInt("id"), 2);
 	}
 	
+	@Test(priority = 4)
 	public void storeResponseDimension() {
 		json = res.jsonPath();
 		Map<String, Float> dimensions = json.getMap("dimensions");
