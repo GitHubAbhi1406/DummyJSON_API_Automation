@@ -27,11 +27,17 @@ pipeline {
                         returnStdout: true
                     ).trim()
 
-                    echo "Changed files: ${changedFiles}"
+                    echo "Changed files:\n${changedFiles}"
 
                     if (changedFiles.contains('src/test/java')) {
-                        MODIFIED_TEST = changedFiles.tokenize('/').last().replace('.java', '')
-                        echo "Detected modified test: ${MODIFIED_TEST}"
+                        env.MODIFIED_TEST = changedFiles
+                                .tokenize('\n')
+                                .find { it.contains('src/test/java') }
+                                .tokenize('/')
+                                .last()
+                                .replace('.java', '')
+
+                        echo "Detected modified test: ${env.MODIFIED_TEST}"
                     } else {
                         echo "No test files modified"
                     }
@@ -41,11 +47,11 @@ pipeline {
 
         stage('Run Modified Test First') {
             when {
-                expression { MODIFIED_TEST != '' }
+                expression { env.MODIFIED_TEST?.trim() }
             }
             steps {
-                echo "Running modified test only: ${MODIFIED_TEST}"
-                bat "mvn test -Dtest=${MODIFIED_TEST}"
+                echo "Running modified test only: ${env.MODIFIED_TEST}"
+                bat "mvn test -Dtest=${env.MODIFIED_TEST}"
             }
         }
 
