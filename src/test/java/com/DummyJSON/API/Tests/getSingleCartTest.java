@@ -32,5 +32,6 @@ public class getSingleCartTest extends BaseTest{
 		List<String> products_list = json.getList("products.title", String.class);
 		
 		System.out.println(products_list);
+		System.out.println("Test Pass");
 	}
 }
