@@ -11,4 +11,5 @@ public class Routes{
 	public static final String RECEPI_BY_ID = "/recipes/{id}";
 	public static final String POSTS = "/posts/add";
 	public static final String ADD_PRODUCTS = "/products/add";
+	public static final String GET_COMMENTS = "/comments";
 }
