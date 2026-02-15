@@ -15,12 +15,4 @@ public class PostRequestApiUtils{
 				.post(endpoint);
 	}
 	
-	public static Response postUserInfo(String endpoint, File requestBody) {
-		
-		return given().
-				header("Content-Type", "application/json")
-				.body(requestBody)
-				.when()
-				.post(endpoint);
-	}
 }

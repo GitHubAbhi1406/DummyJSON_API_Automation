@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.DummyJSON.API.Tests.createPostTest">
+      <class name="com.DummyJSON.API.Tests.checkLoginCreds">
         <methods>
+          <include name="logResponse"/>
           <include name="setup"/>
           <include name="getResponse"/>
-          <include name="printResponse"/>
         </methods>
-      </class> <!-- com.DummyJSON.API.Tests.createPostTest -->
+      </class> <!-- com.DummyJSON.API.Tests.checkLoginCreds -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

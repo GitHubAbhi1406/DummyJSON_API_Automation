@@ -1,60 +1,36 @@
 package com.DummyJSON.API.Tests;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.DummyJSON.API.ApiUtils.ApiUtils;
 import com.DummyJSON.API.baseFile.BaseTest;
 import com.DummyJSON.API.endpoints.Routes;
-
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class getAllComments extends BaseTest{
+public class getAllUsersTest extends BaseTest{
 	
 	Response res;
-	JsonPath json;
 	
 	@BeforeClass
 	public void getResponse() {
 		
-		res = ApiUtils.getResponse(Routes.GET_COMMENTS);
+		res = ApiUtils.getResponse(Routes.USERS);
 	}
 	
 	@Test(priority = 1)
 	public void printResponse() {
-		
-		System.out.println("--------------------Response Body is as below-----------------");
+		System.out.println("------------------Response for all users is as below----------------------------");
 		res.then().log().all();
 	}
 	
 	@Test(priority = 2)
-	public void checkStatusCode() {
-		
+	public void checkResponseCode() {
 		Assert.assertEquals(res.getStatusCode(), 200);
 	}
 	
 	@Test(priority = 3)
-	public void checkResponseHeaders() {
-		
+	public void validateResponseHeader() {
 		Assert.assertEquals(res.getHeader("Content-Type"), "application/json; charset=utf-8");
 	}
-	
-	@Test(priority = 4)
-	public void extractResponse() {
-		
-		json = res.jsonPath();
-		
-		List<String> body = new ArrayList<>();
-		
-		body = json.getList("comments.body");
-		
-		for(int i=0;i<body.size();i++) {
-			System.out.println(body.get(i));
-		}
-	}
-	
 }
