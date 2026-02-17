@@ -8,7 +8,7 @@ import com.DummyJSON.API.baseFile.BaseTest;
 import com.DummyJSON.API.endpoints.Routes;
 import io.restassured.response.Response;
 
-public class postSingleProduct extends BaseTest{
+public class postSingleProductTest extends BaseTest{
 	Response res;
 	
 	@BeforeClass

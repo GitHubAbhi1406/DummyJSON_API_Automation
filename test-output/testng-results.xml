@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-15T21:08:26 IST" name="Default suite" finished-at="2026-02-15T21:08:29 IST" duration-ms="2282">
+  <suite started-at="2026-02-17T18:20:47 IST" name="Default suite" finished-at="2026-02-17T18:20:49 IST" duration-ms="1615">
     <groups>
     </groups>
-    <test started-at="2026-02-15T21:08:26 IST" name="Default test" finished-at="2026-02-15T21:08:29 IST" duration-ms="2282">
-      <class name="com.DummyJSON.API.Tests.checkLoginCreds">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.DummyJSON.API.Tests.checkLoginCreds@38d8f54a]" started-at="2026-02-15T21:08:27 IST" name="setup" finished-at="2026-02-15T21:08:27 IST" duration-ms="287" status="PASS">
+    <test started-at="2026-02-17T18:20:47 IST" name="Default test" finished-at="2026-02-17T18:20:49 IST" duration-ms="1615">
+      <class name="com.DummyJSON.API.Tests.getAllUsersTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.DummyJSON.API.Tests.getAllUsersTest@76505305]" started-at="2026-02-17T18:20:47 IST" name="setup" finished-at="2026-02-17T18:20:48 IST" duration-ms="283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="getResponse()[pri:0, instance:com.DummyJSON.API.Tests.checkLoginCreds@38d8f54a]" started-at="2026-02-15T21:08:27 IST" name="getResponse" finished-at="2026-02-15T21:08:28 IST" duration-ms="1456" status="PASS">
+        <test-method is-config="true" signature="getResponse()[pri:0, instance:com.DummyJSON.API.Tests.getAllUsersTest@76505305]" started-at="2026-02-17T18:20:48 IST" name="getResponse" finished-at="2026-02-17T18:20:49 IST" duration-ms="1180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResponse -->
-        <test-method signature="logResponse()[pri:1, instance:com.DummyJSON.API.Tests.checkLoginCreds@38d8f54a]" started-at="2026-02-15T21:08:28 IST" name="logResponse" finished-at="2026-02-15T21:08:28 IST" duration-ms="57" status="PASS">
+        <test-method signature="printResponse()[pri:1, instance:com.DummyJSON.API.Tests.getAllUsersTest@76505305]" started-at="2026-02-17T18:20:49 IST" name="printResponse" finished-at="2026-02-17T18:20:49 IST" duration-ms="108" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logResponse -->
-        <test-method signature="storeToken()[pri:2, instance:com.DummyJSON.API.Tests.checkLoginCreds@38d8f54a]" started-at="2026-02-15T21:08:28 IST" name="storeToken" finished-at="2026-02-15T21:08:29 IST" duration-ms="447" status="PASS">
+        </test-method> <!-- printResponse -->
+        <test-method signature="checkResponseCode()[pri:2, instance:com.DummyJSON.API.Tests.getAllUsersTest@76505305]" started-at="2026-02-17T18:20:49 IST" name="checkResponseCode" finished-at="2026-02-17T18:20:49 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- storeToken -->
-      </class> <!-- com.DummyJSON.API.Tests.checkLoginCreds -->
+        </test-method> <!-- checkResponseCode -->
+        <test-method signature="validateResponseHeader()[pri:3, instance:com.DummyJSON.API.Tests.getAllUsersTest@76505305]" started-at="2026-02-17T18:20:49 IST" name="validateResponseHeader" finished-at="2026-02-17T18:20:49 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateResponseHeader -->
+      </class> <!-- com.DummyJSON.API.Tests.getAllUsersTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

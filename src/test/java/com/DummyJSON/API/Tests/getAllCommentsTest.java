@@ -13,7 +13,7 @@ import com.DummyJSON.API.endpoints.Routes;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class getAllComments extends BaseTest{
+public class getAllCommentsTest extends BaseTest{
 	
 	Response res;
 	JsonPath json;

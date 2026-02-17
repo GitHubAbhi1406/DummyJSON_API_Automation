@@ -8,14 +8,17 @@ public class ApiUtils{
 	public static Response getResponse(String endpoint) {
 		
 		return given().
-				when().
+				log().all().
+					when().
 				get(endpoint);
 	}
 	
 	public static Response getReponseById(String endpoint, int id) {
 		
 		return given().
-				when().pathParam("id", id)
+				log().all().
+					when().
+						pathParam("id", id)
 				.get(endpoint);
 	}
 	
