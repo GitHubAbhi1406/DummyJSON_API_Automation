@@ -1,9 +1,10 @@
-package com.DummyJSON.API.Tests;
+package com.DummyJSON.API.GETRequestTests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import com.DummyJSON.API.ApiUtils.ApiUtils;
+
+import com.DummyJSON.API.GETRequestApiUtils.ApiUtils;
 import com.DummyJSON.API.baseFile.BaseTest;
 import com.DummyJSON.API.endpoints.Routes;
 import io.restassured.path.json.JsonPath;
@@ -49,4 +50,9 @@ public class getAllProductsTest extends BaseTest{
 			System.out.println(product.get("title"));
 		}
 	}
+	
+	@Test(priority = 4)
+	public void validateResponseTime() {
+		Assert.assertTrue(res.getTime()<3000, "Response is not within acceptable limits");	
+		}
 }

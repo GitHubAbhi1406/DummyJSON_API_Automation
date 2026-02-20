@@ -1,4 +1,4 @@
-package com.DummyJSON.API.ApiUtils;
+package com.DummyJSON.API.GETRequestApiUtils;
 
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.*;

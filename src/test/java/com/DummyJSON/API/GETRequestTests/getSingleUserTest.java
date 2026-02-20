@@ -1,14 +1,15 @@
-package com.DummyJSON.API.Tests;
+package com.DummyJSON.API.GETRequestTests;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import com.DummyJSON.API.ApiUtils.ApiUtils;
 import com.DummyJSON.API.baseFile.BaseTest;
-import com.DummyJSON.API.JsonUtil.*;
+import com.DummyJSON.API.GETRequestApiUtils.ApiUtils;
 import com.DummyJSON.API.endpoints.Routes;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
@@ -58,11 +59,22 @@ public class getSingleUserTest extends BaseTest{
 		json = res.jsonPath();
 		
 		un = json.getString("username");
-		pw = json.getString("password");
+		pw = json.getString("password");	
 		
-		JsonFilePathUtil.saveLoginInfo(un,pw);
-		
-		
+		try {
+			Map<String,Object> creds = new HashMap<>();
+			creds.put("username", un);
+			creds.put("password", pw);
+			
+			File file = new File("src/test/resources/PostJsonFiles/loginInfo.json");
+			
+			ObjectMapper mapper = new ObjectMapper();
+			
+			mapper.writerWithDefaultPrettyPrinter().writeValue(file, creds);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

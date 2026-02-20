@@ -1,9 +1,11 @@
-package com.DummyJSON.API.Tests;
+package com.DummyJSON.API.GETRequestTests;
 
 import java.util.List;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import com.DummyJSON.API.ApiUtils.ApiUtils;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import com.DummyJSON.API.GETRequestApiUtils.ApiUtils;
 import com.DummyJSON.API.baseFile.BaseTest;
 import com.DummyJSON.API.endpoints.Routes;
 import io.restassured.path.json.JsonPath;
@@ -26,6 +28,11 @@ public class getSingleCartTest extends BaseTest{
 	}
 	
 	@Test(priority = 2)
+	public void validateResponseCode() {
+		Assert.assertEquals(res.getStatusCode(), 200);
+	}
+	
+	@Test(priority = 3)
 	public void extractTtile() {
 		JsonPath json = res.jsonPath();
 		
@@ -33,5 +40,10 @@ public class getSingleCartTest extends BaseTest{
 		
 		System.out.println(products_list);
 		System.out.println("Test Pass");
+	}
+	
+	@Test(priority = 4)
+	public void validateResponseSchema() {
+		res.then().assertThat().body(matchesJsonSchemaInClasspath("CartsSchema/cartsSchema.json"));
 	}
 }

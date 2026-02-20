@@ -1,11 +1,11 @@
-package com.DummyJSON.API.Tests;
+package com.DummyJSON.API.GETRequestTests;
 
 import java.util.Map;
-
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import com.DummyJSON.API.ApiUtils.ApiUtils;
+import com.DummyJSON.API.GETRequestApiUtils.ApiUtils;
 import com.DummyJSON.API.baseFile.BaseTest;
 import com.DummyJSON.API.endpoints.Routes;
 import io.restassured.path.json.JsonPath;
@@ -43,5 +43,10 @@ public class getProductbyidTest extends BaseTest{
 		Map<String, Float> dimensions = json.getMap("dimensions");
 		
 		System.out.println(dimensions);
+	}
+	
+	@Test(priority = 5)
+	public void validateJsonSchema() {
+		res.then().assertThat().body(matchesJsonSchemaInClasspath("ProductsSchema/productsSchema.json"));
 	}
 }
